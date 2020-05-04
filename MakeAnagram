@@ -1,0 +1,15 @@
+def makeAnagram(a, b)
+    new_arr = []
+    cnt = 0
+    a.split("").each do |character|
+    if b.include? character
+      if a.count(character) == b.count(character) || a.count(character) < b.count(character)
+        new_arr << character * a.count(character)
+      else
+        new_arr << character * b.count(character)
+      end
+    end
+  end
+   cnt = (a.length - new_arr.uniq.join.length) + (b.length - new_arr.uniq.join.length)
+   return cnt 
+end
