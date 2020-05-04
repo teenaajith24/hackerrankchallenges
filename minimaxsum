@@ -1,0 +1,4 @@
+def miniMaxSum(arr)
+    print arr.sort!.first(4).reduce(:+)
+    print " #{arr.last(4).reduce(:+)}"
+end
