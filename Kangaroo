@@ -1,0 +1,9 @@
+def kangaroo(x1, v1, x2, v2)
+  return "NO"  if (x2 >x1) && (v2 > v1) 
+  return  "NO"  if v2==v1
+  result = (x1-x2) % (v2-v1)
+  if result === 0 
+    return "YES"
+  end
+    return "NO"
+end
