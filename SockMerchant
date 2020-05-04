@@ -1,0 +1,9 @@
+def sockMerchant(n, ar)
+    cnt = 0
+    if n >=1 && n <= 100
+        pair_count = Hash.new
+         ar.each { |num| pair_count[num] = ar.count(num)}
+          pair_count.each { |key,value| cnt += value/2 }
+    end
+    return cnt
+end
