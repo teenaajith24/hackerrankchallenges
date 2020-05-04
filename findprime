@@ -1,0 +1,9 @@
+def find_prime(n) 
+    return false if n == 1 
+    for j in 2..(Math.sqrt(n).to_i)
+        if n % j == 0
+           return false
+        end
+    end
+    return true
+end
