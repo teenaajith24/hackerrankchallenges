@@ -1,0 +1,7 @@
+def rot13(secret_messages)
+  # your code here
+    res = ""
+    secret_messages.map do |msg|
+        msg.tr!('A-MN-Za-mn-z', 'N-ZA-Mn-za-m')
+    end
+end
