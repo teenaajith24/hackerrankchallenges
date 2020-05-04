@@ -1,0 +1,12 @@
+def maximumToys(prices, k)
+    sum = 0
+    prices.sort!
+    count = 0 ;
+    prices.each do |price|
+        if price <= k
+            k -= price 
+            count+=1 
+        end
+    end
+    return count 
+ end
