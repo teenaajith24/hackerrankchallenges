@@ -1,0 +1,15 @@
+def diagonalDifference(arr)
+    # Write your code here
+    i = 0
+    j = 0
+    k = arr.length-1
+    prima_diag = []
+    sec_diag = []
+    for i in 0..arr.length-1
+        prima_diag << arr[i][j] 
+        sec_diag << arr[i][k]
+        j += 1
+        k -= 1
+    end
+    (prima_diag.reduce(:+) - sec_diag.reduce(:+)).abs  
+end
