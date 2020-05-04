@@ -1,0 +1,12 @@
+def timeConversion(s)
+    m = s.match /\d+/
+    if m[0] =="12" && s[/PM|AM/] == "PM"
+        return "#{m[0]}#{s[2..-3]}"
+    elsif m[0] =="12" && s[/PM|AM/] == "AM"
+        return "00#{s[2..-3]}"
+    elsif s[/PM|AM/] == "PM"
+        return "#{m[0].to_i+12}#{s[2..-3]}"
+    elsif s[/PM|AM/] == "AM" 
+        return "#{m[0]}#{s[2..-3]}"  
+    end
+end
