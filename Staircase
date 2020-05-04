@@ -1,0 +1,14 @@
+def staircase(n)
+    new_len = n - 1
+    for i in 1..n
+        new_len.times { print " "}
+        temp = new_len
+        while  temp < n
+        print "#"
+        temp += 1
+        # puts "#{temp}"
+        end
+        new_len -= 1
+        print "\n"
+    end
+end
