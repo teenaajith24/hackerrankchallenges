@@ -1,0 +1,6 @@
+def countApplesAndOranges(s, t, a, b, apples, oranges)
+    app_count = apples.select{ |apple| apple >=0 }.count { |apple| (a + apple).between?(s,t) }
+    orng_count = oranges.select{ |orange| orange <=0 }.count { |orange| (b+orange).between?(s,t) }
+    puts app_count
+    puts orng_count
+end
