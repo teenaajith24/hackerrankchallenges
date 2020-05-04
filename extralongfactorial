@@ -1,0 +1,3 @@
+def extraLongFactorials(n)
+    puts n.downto(1).reduce(:*)     
+end
