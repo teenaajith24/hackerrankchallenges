@@ -1,0 +1,14 @@
+def arrayManipulation(n, queries)
+    new_arr = Array.new(n+2,0)
+    queries.each do |row|
+        a = row[0]
+        b = row[1]
+        k = row[2]
+        new_arr[a] += k
+        new_arr[b+1] -= k
+    end
+    for i in 1..(new_arr.length-1)
+      new_arr[i] += new_arr[i-1]
+    end
+    new_arr.max
+end
