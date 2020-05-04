@@ -1,0 +1,11 @@
+nd = gets.rstrip.split
+
+n = nd[0].to_i
+
+d = nd[1].to_i
+
+a = gets.rstrip.split(' ').map(&:to_i)
+for i in 1..d
+    a.push(a.shift)
+end
+a.each { |n| print "#{n} "}
