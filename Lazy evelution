@@ -1,0 +1,6 @@
+require 'prime'
+prime_palindrome = -> (size) do
+    Prime.each.lazy.select { |x| x.to_s == x.to_s.reverse }.first(size)
+end
+size = gets.chomp.to_i
+print prime_palindrome.(size)
