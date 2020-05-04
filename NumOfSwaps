@@ -1,0 +1,9 @@
+num_swaps = 0
+for i in 0...(a.length)
+    for j in 0...(a.length-1)
+        if a[j] > a[j+1]
+            a[j],a[j+1] = a[j+1],a[j]
+            num_swaps +=1
+        end
+    end
+end
