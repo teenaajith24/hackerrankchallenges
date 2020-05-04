@@ -1,0 +1,3 @@
+def aVeryBigSum(ar)
+  ar.reduce(:+)
+end
